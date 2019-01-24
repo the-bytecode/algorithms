@@ -1,22 +1,32 @@
-package main.java;
+package main.java.com.algos4.uf;
 
-public class QuickFindUnionFind {
+public class QuickFindUF {
     private int[] id;
 
-    public QuickFindUnionFind(int n) {
+    /**
+     * Number of times array access - N
+     * @param n
+     */
+    public QuickFindUF(int n) {
         id = new int[n];
         for (int i = 0; i < n; i++) {
             id[i] = i;
         }
     }
 
+    /**
+     * Number of times array access - 2
+     * @param p
+     * @param q
+     * @return
+     */
     public boolean isConnected(int p, int q) {
         return id[p] == id[q];
     }
 
     /**
-     * Takes quadratic time.
-     *
+     * Takes quadratic time. Quadratic algorithms do not scale with technology.
+     * Number of times array access - N^2
      * @param p
      * @param q
      */
